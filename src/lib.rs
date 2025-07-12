@@ -64,8 +64,8 @@ pub mod quoters {
     sol! {
         #[sol(rpc)]
         #[derive(Debug)]
-        UniswapV3Router,
-        "src/abis/dex/routers/uniswap_v3_router_02.json"
+        UniswapV3Quoter,
+        "src/abis/dex/quoters/uniswap_v3_quoter_02.json"
     }
 }
 
@@ -90,8 +90,6 @@ pub mod addresses {
                 address!("0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45");
             pub const V3_QUOTER_02: Address =
                 address!("0x61fFE014bA17989E743c5F6cB21bF9697530B21e");
-            pub const V3_UNIVERSAL_ROUTER: Address =
-                address!("0x66a9893cc07d91d95644aedd05d03f95e1dba8af");
         }
 
         /// Uniswap - Base
@@ -108,8 +106,6 @@ pub mod addresses {
                 address!("0x2626664c2603336E57B271c5C0b26F421741e481");
             pub const V3_QUOTER_02: Address =
                 address!("0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a");
-            pub const V3_UNIVERSAL_ROUTER: Address =
-                address!("0x6ff5693b99212da76ad316178a184ab56d299b43");
         }
     }
 }
