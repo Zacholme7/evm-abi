@@ -10,3 +10,4 @@ path = "example/main.rs"
 [dependencies]
 alloy-sol-types = {version = "1.2.1", features = ["json"]}
 alloy-contract = "1.0.20"
+alloy-primitives = "1.2.1"
