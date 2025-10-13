@@ -69,6 +69,39 @@ pub mod quoters {
     }
 }
 
+/// AAVE lending contracts
+pub mod aave {
+    use super::*;
+
+    sol! {
+        #[sol(rpc)]
+        #[derive(Debug)]
+        AaveOracle,
+        "src/abis/lending/aave/aave_oracle.json"
+    }
+
+    sol! {
+        #[sol(rpc)]
+        #[derive(Debug)]
+        AavePool,
+        "src/abis/lending/aave/pool.json"
+    }
+
+    sol! {
+        #[sol(rpc)]
+        #[derive(Debug)]
+        AavePoolAddressProvider,
+        "src/abis/lending/aave/pool_address_provider.json"
+    }
+
+    sol! {
+        #[sol(rpc)]
+        #[derive(Debug)]
+        AaveUiPoolDataProvider,
+        "src/abis/lending/aave/ui_pool_data_provider.json"
+    }
+}
+
 /// Address book
 pub mod addresses {
 
