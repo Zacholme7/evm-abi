@@ -73,39 +73,54 @@ pub mod quoters {
 pub mod aave {
     use super::*;
 
-    sol! {
-        #[sol(rpc)]
-        #[derive(Debug)]
-        AaveOracle,
-        "src/abis/lending/aave/aave_oracle.json"
+    pub mod oracle {
+        use super::*;
+        sol! {
+            #[sol(rpc)]
+            #[derive(Debug)]
+            AaveOracle,
+            "src/abis/lending/aave/aave_oracle.json"
+        }
     }
 
-    sol! {
-        #[sol(rpc)]
-        #[derive(Debug)]
-        AavePool,
-        "src/abis/lending/aave/pool.json"
+    pub mod pool {
+        use super::*;
+        sol! {
+            #[sol(rpc)]
+            #[derive(Debug)]
+            AavePool,
+            "src/abis/lending/aave/pool.json"
+        }
     }
 
-    sol! {
-        #[sol(rpc)]
-        #[derive(Debug)]
-        AavePoolAddressProvider,
-        "src/abis/lending/aave/pool_address_provider.json"
+    pub mod pool_address_provider {
+        use super::*;
+        sol! {
+            #[sol(rpc)]
+            #[derive(Debug)]
+            AavePoolAddressProvider,
+            "src/abis/lending/aave/pool_address_provider.json"
+        }
     }
 
-    sol! {
-        #[sol(rpc)]
-        #[derive(Debug)]
-        AaveUiPoolDataProvider,
-        "src/abis/lending/aave/ui_pool_data_provider.json"
+    pub mod ui_pool_data_provider {
+        use super::*;
+        sol! {
+            #[sol(rpc)]
+            #[derive(Debug)]
+            AaveUiPoolDataProvider,
+            "src/abis/lending/aave/ui_pool_data_provider.json"
+        }
     }
 
-    sol! {
-        #[sol(rpc)]
-        #[derive(Debug)]
-        AaveProtocolDataProvider,
-        "src/abis/lending/aave/protocol_data_provider.json"
+    pub mod protocol_data_provider {
+        use super::*;
+        sol! {
+            #[sol(rpc)]
+            #[derive(Debug)]
+            AaveProtocolDataProvider,
+            "src/abis/lending/aave/protocol_data_provider.json"
+        }
     }
 }
 
