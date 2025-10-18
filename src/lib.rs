@@ -100,6 +100,13 @@ pub mod aave {
         AaveUiPoolDataProvider,
         "src/abis/lending/aave/ui_pool_data_provider.json"
     }
+
+    sol! {
+        #[sol(rpc)]
+        #[derive(Debug)]
+        AaveProtocolDataProvider,
+        "src/abis/lending/aave/protocol_data_provider.json"
+    }
 }
 
 /// Address book
