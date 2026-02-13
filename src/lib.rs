@@ -7,16 +7,24 @@ pub mod factories {
     sol! {
         #[sol(rpc)]
         #[derive(Debug)]
+        UniswapV1Factory,
+        "src/abis/dex/factories/uniswap_v1.json"
+    }
+
+    sol! {
+        #[sol(rpc)]
+        #[derive(Debug)]
         UniswapV2Factory,
-        "src/abis/dex/factories/uniswap_v2_factory.json"
+        "src/abis/dex/factories/uniswap_v2.json"
     }
 
     sol! {
         #[sol(rpc)]
         #[derive(Debug)]
         UniswapV3Factory,
-        "src/abis/dex/factories/uniswap_v3_factory.json"
+        "src/abis/dex/factories/uniswap_v3.json"
     }
+}
 }
 
 /// AMM Routers
@@ -27,14 +35,21 @@ pub mod routers {
         #[sol(rpc)]
         #[derive(Debug)]
         UniswapV2Router,
-        "src/abis/dex/routers/uniswap_v2_router.json"
+        "src/abis/dex/routers/uniswap_v2.json"
     }
 
     sol! {
         #[sol(rpc)]
         #[derive(Debug)]
-        UniswapV3Router,
-        "src/abis/dex/routers/uniswap_v3_router_02.json"
+        UniswapV3Router_02,
+        "src/abis/dex/routers/uniswap_v3_02.json"
+    }
+
+    sol! {
+        #[sol(rpc)]
+        #[derive(Debug)]
+        UniswapV4Router,
+        "src/abis/dex/routers/uniswap_v4.json"
     }
 }
 
@@ -45,15 +60,15 @@ pub mod pools {
     sol! {
         #[sol(rpc)]
         #[derive(Debug)]
-        UniswapV2Pair,
-        "src/abis/dex/pools/uniswap_v2_pair.json"
+        UniswapV2Pool,
+        "src/abis/dex/pools/uniswap_v2.json"
     }
 
     sol! {
         #[sol(rpc)]
         #[derive(Debug)]
         UniswapV3Pool,
-        "src/abis/dex/pools/uniswap_v3_pool.json"
+        "src/abis/dex/pools/uniswap_v3.json"
     }
 }
 
@@ -64,8 +79,89 @@ pub mod quoters {
     sol! {
         #[sol(rpc)]
         #[derive(Debug)]
-        UniswapV3Quoter,
-        "src/abis/dex/quoters/uniswap_v3_quoter_02.json"
+        UniswapV3Quoter_02,
+        "src/abis/dex/quoters/uniswap_v3_02.json"
+    }
+
+    sol! {
+        #[sol(rpc)]
+        #[derive(Debug)]
+        UniswapV4Quoter,
+        "src/abis/dex/quoters/uniswap_v4.json"
+    }
+}
+/// Tokens
+pub mod tokens {
+    use super::*;
+
+    sol! {
+        #[sol(rpc)]
+        #[derive(Debug)]
+        ERC20,
+        "src/abis/tokens/ERC20.json"
+    }
+
+    sol! {
+        #[sol(rpc)]
+        #[derive(Debug)]
+        ERC721,
+        "src/abis/tokens/ERC721.json"
+    }
+
+    sol! {
+        #[sol(rpc)]
+        #[derive(Debug)]
+        ERC1155,
+        "src/abis/tokens/ERC1155.json"
+    }
+}
+
+/// Lending
+pub mod lending {
+    use super::*;
+
+    pub mod aave {
+        use super::*;
+
+        sol! {
+            #[sol(rpc)]
+            #[derive(Debug)]
+            AToken,
+            "src/abis/lending/aave/atoken.json"
+        }
+
+        sol! {
+            #[sol(rpc)]
+            #[derive(Debug)]
+            LendingPool,
+            "src/abis/lending/aave/lendingpool.json"
+        }
+
+        sol! {
+            #[sol(rpc)]
+            #[derive(Debug)]
+            LendingPoolAddressesProvider,
+            "src/abis/lending/aave/LendingPoolAddressesProvider.json"
+        }
+
+        sol! {
+            #[sol(rpc)]
+            #[derive(Debug)]
+            LendingPoolCore,
+            "src/abis/lending/aave/LendingPoolCore.json"
+        }
+    }
+}
+
+/// Utils
+pub mod utils {
+    use super::*;
+
+    sol! {
+        #[sol(rpc)]
+        #[derive(Debug)]
+        Multicall3,
+        "src/abis/utils/multicall3.json"
     }
 }
 
